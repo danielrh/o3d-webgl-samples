@@ -1415,17 +1415,17 @@ function initHud() {
 
   var plane = o3djs.primitives.createPlane(
       g_pack, g_solidMaterial, 1, 1, 1, 1,
-      [[1, 0, 0, 0],
-       [0, 0, 1, 0],
-       [0,-1, 0, 0],
-       [0, 0, 0, 1]]);
+      o3djs.math.makeMatrix4(1, 0, 0, 0,
+       0, 0, 1, 0,
+       0,-1, 0, 0,
+       0, 0, 0, 1));
 
   var backPlane = o3djs.primitives.createPlane(
       g_pack, g_solidMaterial, 1, 1, 1, 1,
-      [[1, 0, 0, 0],
-       [0, 0, 1, 0],
-       [0,-1, 0, 0],
-       [0, 0, 0, 1]]);
+      o3djs.math.makeMatrix4(1, 0, 0, 0,
+       0, 0, 1, 0,
+       0,-1, 0, 0,
+       0, 0, 0, 1));
 
   barT2.addShape(plane);
   //backT2.addShape(backPlane);

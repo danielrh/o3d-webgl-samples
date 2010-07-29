@@ -302,7 +302,7 @@ function updateLightMatrix() {
       20);                 // Far plane.
 
   var adjustedProjection =
-          [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 2, 0], [0, 0, -1, 1]];
+          o3djs.math.makeMatrix4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 2, 0, 0, 0, -1, 1);
       o3d.Transform.compose(
           adjustedProjection, lightProjection, adjustedProjection);
 
